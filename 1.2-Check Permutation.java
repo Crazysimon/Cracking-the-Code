@@ -24,12 +24,18 @@ boolean permutation(String s1, String s2){
         return false;
     }
     
-    int[] letters = new int[128];
+    int[] letters = new int[128];  
     char[] s1_array = s1.toCharArray();
     for (char c : s1_array){ //count number of each char in s1
         letters[c] ++;
     }
-    
+    /*
+     for (int i = 0; i < s1.length(); i ++){
+	    	int c = (int) s1.charAt(i);
+	        letters[c] ++;
+	    }
+     */
+
     for (int i = 0; i < s2.length(); i ++){
         int c = (int) s2.charAt(i);
         letters[c] --;
