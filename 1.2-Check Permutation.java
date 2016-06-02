@@ -33,7 +33,7 @@ boolean permutation(String s1, String s2){
     for (int i = 0; i < s2.length(); i ++){
         int c = (int) s2.charAt(i);
         letters[c] --;
-        if(letter[c] < 0){
+        if(letters[c] < 0){
             return false;
         }
     }
