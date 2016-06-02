@@ -16,7 +16,7 @@ boolean isUniqueChars(string str){
 }
 
 
-//algorithm 2
+//algorithm 2 (optional)
 boolean isUniqueChars(string str){
     int checker = 0;
     for (int i = 0; i < str.length(); i++){
