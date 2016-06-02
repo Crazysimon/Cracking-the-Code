@@ -27,4 +27,5 @@ boolean isUniqueChars(string str){
         checker |= (1<<val);
     }
     return true;
+
 }
