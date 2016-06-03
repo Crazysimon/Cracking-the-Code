@@ -54,7 +54,7 @@ boolean isPermutationOfPalindrome(String phrase){
     int[] hashtable = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1 ];
     for (char c : phrase.toCharArray()){
         int x = getCharNumber(c);
-        if (x = -1 ){
+        if (x != -1 ){
            hashtable[x]++;
            if (table[x]%2 == 1){
             countOdd++;
