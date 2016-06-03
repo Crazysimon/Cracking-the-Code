@@ -12,7 +12,7 @@ boolean isPermutationOfPalindrome(String phrase){
 
 int[] buildCharFrequencyTable(String phrase){
     int[] hashtable = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1 ];
-    for (char c : phrase.toCharArray){
+    for (char c : phrase.toCharArray()){
         int x =getCharNumber(c);
         if (x != -1){
             hashtable[x]++;
@@ -42,4 +42,37 @@ boolean checkMaxOneOdd(int[] table){
         }
     }
     return true;
+}
+
+
+
+
+//Algorithm 2:optimize, check the odd number as we go along
+
+boolean isPermutationOfPalindrome(String phrase){
+    int countOdd = 0;
+    int[] hashtable = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1 ];
+    for (char c : phrase.toCharArray()){
+        int x = getCharNumber(c);
+        if (x = -1 ){
+           hashtable[x]++;
+           if (table[x]%2 == 1){
+            countOdd++;
+           }else{
+            countOdd--;
+           }
+        }
+    }
+    return countOdd <= 1;
+    
+}
+
+int getCharNumber(Character c){
+    int a = Character.getNumericValue('a');
+    int z = Character.getNumericValue('z');
+    int val = Character.getNumericValue(c);
+    if (a <=val && val <= z){
+        return val - a;
+    }
+    return -1;
 }
