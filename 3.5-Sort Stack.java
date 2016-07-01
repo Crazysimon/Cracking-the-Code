@@ -16,3 +16,6 @@ void sort(Stack<Integer> s){
         s.push(r.pop());
     }
 }
+
+//this algorithm is O(N^2) time and O(N) space.
+//If unlimited stacks allowed, we could use mergesort abd quicksort to solve this problem.
