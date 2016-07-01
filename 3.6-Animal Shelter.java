@@ -4,7 +4,7 @@ abstract class Animal{
     private int order;
     protected String name;
     public Animal(String n){ name = n;}
-    public cvoid setOrder(int ord){ order = ord; }
+    public void setOrder(int ord){ order = ord; }
     public int getOrder(){return order;}
     
     /*compare orders of animals to return the older item.*/
