@@ -45,3 +45,5 @@ int checkHeight(TreeNode root){
 boolean isBalanced (TreeNode root){
     return checkHeight(root) != Integer.MIN_VALUE;
 }
+
+// this code runs in O(N) time and O(H) space, H is the height of the tree.
