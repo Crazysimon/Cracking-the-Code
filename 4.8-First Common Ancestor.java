@@ -80,7 +80,32 @@ TreeNode getSilbing(TreeNode node){
 
 //*Solution 3: WithOut Links to Parent
 
+TreeNode commonAncestor(TreeNode root, TreeNode p, TreeNode q){
+    /*Error check - One node in the tree*/
+    if(!covers(root, p) || !covers(root, q)){
+        return null;
+    }
+    return ancestorHelper(root, p ,q);
+}
 
+TreeNode ancestorHelper(TreeNode root, TreeNode p, TreeNode q){
+    if(root == null || root == q || root == p){
+        return root;
+    }
+    boolean pIsOnLeft = covers(root.left, p);
+    boolean qIsOnLeft = covers(root.left, q);
+    if (pIsOnLeft != pIsOnLeft){//on different side;
+        return root;
+    }
+    TreeNode childSide = pIsOnLeft? root.left : root.right;
+    return ancestorHelper(childside, p ,q);
+}
+
+boolean covers(TreeNode root, TreeNode p){
+    if (root == null) return false;
+    if (root == p) return true;
+    return covers(root.left, p) || covers(root.right, p);
+}
 
 
 

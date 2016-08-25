@@ -127,3 +127,5 @@ public class Project{
     
 }
 
+//this solution takes O(P + D) time, where P Is the number of projects and D is the number of the dependency pairs.
+
